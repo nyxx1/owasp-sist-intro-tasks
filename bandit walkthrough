@@ -1,0 +1,113 @@
+Level 0
+SSH to bandit using the command:
+"ssh bandit0@bandit.labs.overthewire.org -p 2220"
+password : bandit0
+
+Level 0->1
+commands used:
+ls
+cat readme
+password: boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+Level 1->2
+commands used: 
+ls
+cat ./-
+password:CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+
+Level 2->3
+commands used:
+ls
+cat "spaces in the filename"
+password: UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+
+Level 3->4
+ls
+cd inhere
+ls -a
+cat .hidden
+passwd: pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+
+Level 4->5
+ls
+cd inhere
+find . -type f | xargs file
+cat ./-file07
+passwd:koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+
+Level 5->6
+find . -type f -size 1033c ! -executable
+cat maybehere07/.file2
+passwd:DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+
+Level 6->7
+find / -type f -user bandit7 -group bandit6 -size 33c
+cat /var/lib/dpkg/info/bandit7.password
+passwd: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+
+Level 7->8
+grep 'millionth' data.txt
+passwd: cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+
+Level 8->9
+cat data.txt|sort|uniq -u
+passwd: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+
+Level 9-10
+cat data.txt | strings | grep '='
+passwd: truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+
+Level 10-11
+base64 -d data.txt
+passwd:IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+
+Level 11-12
+#decoding Rot13
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+
+Level 12-13
+mkdir /tmp/nyx
+cp data.txt /tmp/nyx
+cd /tmp/nyx
+xxd -r data.txt > passwd
+file passwd
+mv passwd passwd.gz
+gzip -d passwd.gz
+file passwd
+mv passwd passwd.bz2
+bzip2 -d passwd.bz2
+file passwd
+mv passwd passwd.gz
+gzip -d passwd.gz
+file passwd
+mv passwd passwd.tar
+tar -xf passwd.tar
+ls
+file data5bin
+mv data5.bin passwd.tar
+tar -xf passwd.tar
+file data6.bin
+mv data6.bin passwd.bz2
+bzip2 -d passwd.bz2
+file passwd
+mv passwd passwd.tar
+tar -xf passwd.tar
+ls
+mv data8.bin passwd.tar
+file passwd.tar
+mv passwd.tar passwd.gz
+gzip -d passwd.gz
+ls
+file passwd
+cat passwd
+The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+
+Level 13-14
+go to next level using 
+ssh -i sshkey.private bandit14@localhost
+
+Level 14-15
+telnet localhost 30000
+BfMYroe26WYalil77FoDi9qh59eK5xNr
+
