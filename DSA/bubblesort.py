@@ -8,7 +8,7 @@ def bubblesort(list1):
 		for x in range(len(list1)-1):
 			if list1[x] > list1[x+1]:
 				list1[x],list1[x+1] = list1[x+1],list1[x]
-			print(list1)
+	print(list1)
 
 list1=list(map(int,input().strip().split()))
 bubblesort(list1)
