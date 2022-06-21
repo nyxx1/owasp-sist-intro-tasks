@@ -7,4 +7,3 @@ elif x>=y+z:
 	print(x-(y+z)+1)
 else:
 	print(0)
-# hello
