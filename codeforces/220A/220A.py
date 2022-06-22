@@ -3,7 +3,7 @@ a = list(map(int,input().strip().split()))
 b = sorted(a)
 
 swapcount = 0
-for x in range(len(a)):
+for x in range(n):
 	if a[x] != b[x]:
 		swapcount+=1
 
