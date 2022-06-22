@@ -1,4 +1,4 @@
-n=int,input()
+n=int(input())
 a = list(map(int,input().strip().split()))
 b = sorted(a)
 
